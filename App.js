@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { createSwitchNavigator, createAppContainer } from "react-navigation"
 import firebase from 'firebase/compat/app';
+import Login from './screens/Login';
+import Loader from './screens/Loader';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
@@ -14,7 +16,10 @@ firebase.initializeApp({
   messagingSenderId:"", // process.env.REACT_APP_messagingSenderId,
   appId: ""// process.env.REACT_APP_appId,
 });
-
+const AppSwitchNavigator = createSwitchNavigator({
+  Loader: Loader,
+  Login: Login
+})
 
 const AppNavigator = createAppContainer(AppSwitchNavigator)
 
