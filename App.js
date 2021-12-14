@@ -5,6 +5,7 @@ import firebase from 'firebase/compat/app';
 import Login from './screens/Login';
 import Loader from './screens/Loader';
 import Dashboard from './screens/Dashboard';
+import MyLearning from './screens/MyLearnings';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
@@ -20,7 +21,8 @@ firebase.initializeApp({
 const AppSwitchNavigator = createSwitchNavigator({
   Loader: Loader,
   Login: Login,
-  Dashboard: Dashboard
+  Dashboard: Dashboard,
+  MyLearning: MyLearning
 })
 
 const AppNavigator = createAppContainer(AppSwitchNavigator)
